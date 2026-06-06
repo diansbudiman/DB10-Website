@@ -1,0 +1,34 @@
+name: Update latest session
+
+on:
+  push:
+    paths:
+      - "sessions/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Extract session data
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: claude-sonnet-4-6
+        run: node scripts/extract-session.mjs
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          add-paths: data/latest-session.json
+          branch: session-update
+          delete-branch: true
+          commit-message: "Update latest session data"
+          title: "Update latest session"
+          body: "Cek angka di data/latest-session.json lalu merge untuk publish."
