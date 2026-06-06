@@ -19,11 +19,20 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const MIME = { ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp" };
+const IMAGE_EXT = [".png", ".jpg", ".jpeg", ".webp", ".gif"];
+
+// Detect the real image type from the file's first bytes, not its extension.
+function sniffMime(buf) {
+  if (buf.length >= 8 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) return "image/png";
+  if (buf.length >= 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return "image/jpeg";
+  if (buf.length >= 12 && buf.toString("ascii", 0, 4) === "RIFF" && buf.toString("ascii", 8, 12) === "WEBP") return "image/webp";
+  if (buf.length >= 4 && buf.toString("ascii", 0, 4).startsWith("GIF8")) return "image/gif";
+  return null;
+}
 
 function newestImage() {
   const files = readdirSync(SESSIONS_DIR)
-    .filter((f) => MIME[extname(f).toLowerCase()])
+    .filter((f) => IMAGE_EXT.includes(extname(f).toLowerCase()))
     .map((f) => ({ f, t: statSync(join(SESSIONS_DIR, f)).mtimeMs }))
     .sort((a, b) => b.t - a.t);
   if (!files.length) throw new Error("No image found in /sessions");
@@ -31,16 +40,12 @@ function newestImage() {
 }
 
 const SCHEMA = `{
-  "date_display": string  // e.g. "17 May 2026 · Sun" (format the date you see as "D Mon YYYY · Ddd")
-  "kickoff": string       // e.g. "10:16"
-  "duration": string      // the value next to "Time", formatted exactly as shown, e.g. "138'17\\""
-  "grade": string         // e.g. "A+"
-  "score": number         // the /NN score, e.g. 88
-  "beating": number       // the "Beating NN% users" percentage, e.g. 91
+  "date_display": string, "kickoff": string, "duration": string,
+  "grade": string, "score": number, "beating": number,
   "scores": { "stamina": number, "speed": number, "acceleration": number, "balance": number, "power": number },
   "stamina": { "distance_per_min": number, "avg_sprint": number, "calories": number, "distance": number, "high_speed": number, "sprint": number },
-  "speed": { "hs_runs": number, "max_speed": string, "sprints": number },   // max_speed as string to keep the decimal, e.g. "26.0"
-  "acceleration": { "max_accel": string, "sharp_turns": number, "jumps": number, "highest_jump": number },  // max_accel as string, e.g. "3.8"
+  "speed": { "hs_runs": number, "max_speed": string, "sprints": number },
+  "acceleration": { "max_accel": string, "sharp_turns": number, "jumps": number, "highest_jump": number },
   "balance": { "left_foot": number, "right_foot": number, "touch_left": number, "touch_right": number },
   "power": { "max_kick": number }
 }`;
@@ -51,70 +56,48 @@ Use EXACTLY these keys and types:
 ${SCHEMA}
 Rules:
 - Numbers must be plain numbers (no thousands separators, no units).
+- "date_display" formatted like "17 May 2026 · Sun". "duration" is the value labelled "Time".
 - Keep "max_speed" and "max_accel" as strings exactly as displayed (preserve the decimal).
-- "duration" is the value labelled "Time".
 - If any single value is genuinely unreadable, use null for that field only.
 - Output the JSON object and nothing else.`;
 
 async function main() {
   const img = newestImage();
-  const b64 = readFileSync(join(SESSIONS_DIR, img)).toString("base64");
-  const media = MIME[extname(img).toLowerCase()];
+  const buf = readFileSync(join(SESSIONS_DIR, img));
+  const media = sniffMime(buf) || { ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp", ".gif": "image/gif" }[extname(img).toLowerCase()];
+  if (!media) throw new Error("Unsupported or unrecognised image type for " + img);
+  console.log("Using image", img, "as", media);
 
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
-    headers: {
-      "content-type": "application/json",
-      "x-api-key": API_KEY,
-      "anthropic-version": "2023-06-01",
-    },
+    headers: { "content-type": "application/json", "x-api-key": API_KEY, "anthropic-version": "2023-06-01" },
     body: JSON.stringify({
       model: MODEL,
       max_tokens: 1500,
-      messages: [
-        {
-          role: "user",
-          content: [
-            { type: "image", source: { type: "base64", media_type: media, data: b64 } },
-            { type: "text", text: PROMPT },
-          ],
-        },
-      ],
+      messages: [{ role: "user", content: [
+        { type: "image", source: { type: "base64", media_type: media, data: buf.toString("base64") } },
+        { type: "text", text: PROMPT },
+      ] }],
     }),
   });
 
-  if (!res.ok) {
-    console.error("API error", res.status, await res.text());
-    process.exit(1);
-  }
+  if (!res.ok) { console.error("API error", res.status, await res.text()); process.exit(1); }
 
   const data = await res.json();
   let text = (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
   text = text.replace(/^```(?:json)?/i, "").replace(/```$/i, "").trim();
 
   let parsed;
-  try {
-    parsed = JSON.parse(text);
-  } catch (e) {
-    console.error("Could not parse JSON from model output:\n", text);
-    process.exit(1);
-  }
+  try { parsed = JSON.parse(text); }
+  catch (e) { console.error("Could not parse JSON from model output:\n", text); process.exit(1); }
 
   parsed.source_image = "sessions/" + img;
-
-  // light sanity check
   for (const k of ["score", "scores", "stamina", "speed", "acceleration", "balance", "power"]) {
-    if (parsed[k] === undefined) {
-      console.error("Missing key in extracted data:", k);
-      process.exit(1);
-    }
+    if (parsed[k] === undefined) { console.error("Missing key in extracted data:", k); process.exit(1); }
   }
 
   writeFileSync(OUT, JSON.stringify(parsed, null, 2) + "\n");
   console.log("Wrote", OUT, "from", img);
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+main().catch((e) => { console.error(e); process.exit(1); });
