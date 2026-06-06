@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maharddhika Daniswara Budiman · DB10 · Talent Profile</title>
+<meta name="description" content="Official talent profile of Maharddhika Daniswara Budiman (Dipta), No. 10. A versatile midfield intelligence inside Indonesia's elite youth pathway.">
+<meta name="theme-color" content="#060708">
+<meta property="og:title" content="Dipta Budiman · DB10 · Talent Profile">
+<meta property="og:description" content="A versatile midfield intelligence inside Indonesia's elite youth pathway. The question is which club develops him next.">
+<style>
+:root{
+  --bg:#060708; --ink:#f5f5f7;
+  --muted:rgba(245,245,247,.62); --soft:rgba(245,245,247,.40);
+  --line:rgba(255,255,255,.11); --line-2:rgba(255,255,255,.06);
+  --red:#ff453a; --red-2:#ff6b62; --red-deep:#b01209;
+  --ice:#64d2ff; --blue:#0a84ff; --jade:#30d158; --gold:#ffd60a;
+  --glass:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.025));
+  --blur:saturate(180%) blur(24px);
+  --hi:inset 0 1px 0 rgba(255,255,255,.2);
+  --drop:0 30px 70px -34px rgba(0,0,0,.9);
+  --r:20px; --r-lg:28px; --r-xl:38px;
+  --gap:14px; --pad:clamp(20px,3vw,32px);
+  --container:1120px;
+  --sec:clamp(44px,5.2vw,76px);          /* tighter section rhythm */
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.22,.7,.16,1);
+  --mx:50vw; --my:30vh;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.5;
+  letter-spacing:-.012em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.028em;line-height:1.04}
+
+/* atmosphere */
+.bg{position:fixed;inset:0;z-index:-6;pointer-events:none;
+  background:radial-gradient(80% 60% at 8% -8%,rgba(255,69,58,.22),transparent 52%),
+   radial-gradient(70% 60% at 100% 2%,rgba(100,210,255,.13),transparent 50%),
+   radial-gradient(120% 90% at 50% 120%,rgba(48,209,88,.07),transparent 55%),
+   linear-gradient(180deg,#060708,#0a0c10 55%,#050608)}
+.aurora{position:fixed;inset:-25%;z-index:-5;pointer-events:none;opacity:.5;filter:blur(70px);
+  background:conic-gradient(from 90deg at 50% 50%,transparent,rgba(255,69,58,.13),transparent 32%,rgba(100,210,255,.1),transparent 64%,rgba(255,69,58,.08),transparent);
+  animation:spin 70s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.grid-tex{position:fixed;inset:0;z-index:-4;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+  background-size:60px 60px;mask-image:radial-gradient(circle at 50% 26%,#000,transparent 82%)}
+.lightfollow{position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:radial-gradient(440px circle at var(--mx) var(--my),rgba(255,255,255,.06),transparent 72%)}
+.noise{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.04;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* glass */
+.glass{position:relative;background:var(--glass);border:1px solid var(--line);
+  backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+  box-shadow:var(--hi),var(--drop);border-radius:var(--r-lg);overflow:hidden}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+  background:linear-gradient(140deg,rgba(255,255,255,.42),transparent 32%);opacity:.16;mask:linear-gradient(140deg,#000,transparent 46%)}
+.tilt{transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:1;opacity:0;
+  transition:opacity .4s var(--ease);background:radial-gradient(360px circle at var(--px,50%) var(--py,50%),rgba(255,255,255,.16),transparent 60%)}
+.tilt:hover{box-shadow:var(--hi),0 40px 80px -36px rgba(0,0,0,.95)}
+.tilt:hover::after{opacity:1}
+.glass>*{position:relative;z-index:2}
+
+/* layout */
+.wrap{width:min(var(--container),calc(100% - 40px));margin-inline:auto}
+.section{padding-block:var(--sec)}
+.head{max-width:720px;margin-bottom:clamp(26px,3.4vw,40px)}
+.center{margin-inline:auto;text-align:center}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--red-2);margin-bottom:14px}
+.kicker.line::before{content:"";width:26px;height:1.5px;background:linear-gradient(90deg,var(--red-2),transparent)}
+.h2{font-size:clamp(30px,4.6vw,56px);margin-bottom:14px;background:linear-gradient(180deg,#fff,#d6d8df);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:clamp(16px,1.5vw,20px);max-width:620px}
+.center .sub{margin-inline:auto}
+.r{opacity:0;transform:translateY(30px) scale(.985);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.r.in{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
+/* progress + nav */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:300;background:linear-gradient(90deg,var(--red),var(--red-2));box-shadow:0 0 12px rgba(255,69,58,.6)}
+header{position:sticky;top:14px;z-index:200;margin-top:14px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 11px 9px 13px;border-radius:999px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .logo{width:38px;height:38px;border-radius:11px;display:grid;place-items:center}
+.brand .logo img{width:30px;height:30px;object-fit:contain}
+.brand .t small{display:block;font-size:9px;letter-spacing:.26em;color:var(--soft);text-transform:uppercase;margin-bottom:3px}
+.brand .t strong{font-size:14px;font-weight:600;letter-spacing:.01em}
+.menu{display:flex;gap:1px}
+.menu a{font-size:14px;font-weight:500;color:var(--muted);padding:9px 13px;border-radius:999px;transition:.25s var(--ease)}
+.menu a:hover{color:var(--ink);background:rgba(255,255,255,.07)}
+.nav-r{display:flex;align-items:center;gap:9px}
+.lang{display:flex;gap:3px;padding:4px;border-radius:999px;background:rgba(0,0,0,.3);border:1px solid var(--line-2)}
+.lang button{font-family:inherit;font-size:12px;font-weight:600;color:var(--muted);border:0;background:none;border-radius:999px;padding:7px 12px;cursor:pointer;transition:.2s}
+.lang button.on{background:var(--ink);color:#0a0c12}
+
+/* buttons */
+.actions{display:flex;flex-wrap:wrap;gap:11px}
+.center .actions{justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 24px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);font-family:inherit;font-size:15px;font-weight:500;
+  cursor:pointer;backdrop-filter:var(--blur);box-shadow:var(--hi);transition:transform .3s var(--ease),background .3s}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.12)}
+.btn .a{transition:transform .3s var(--ease)}.btn:hover .a{transform:translateX(3px)}
+.btn.solid{background:var(--ink);color:#0a0c12;border-color:transparent;font-weight:600}
+.btn.solid:hover{background:#fff}
+.btn.red{background:linear-gradient(135deg,var(--red-2),var(--red-deep));border-color:rgba(255,107,98,.4);box-shadow:var(--hi),0 18px 44px -18px rgba(255,69,58,.8);font-weight:600;color:#fff}
+
+/* hero */
+.hero{padding-block:clamp(40px,6vw,76px) var(--sec)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--muted)}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--red-2);box-shadow:0 0 0 0 rgba(255,107,98,.7);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 11px rgba(255,107,98,0)}100%{box-shadow:0 0 0 0 rgba(255,107,98,0)}}
+.h1{font-size:clamp(46px,8vw,104px);font-weight:700;letter-spacing:-.045em;margin:24px auto 0;max-width:14ch;background:linear-gradient(180deg,#fff 56%,#ffc9c5);-webkit-background-clip:text;background-clip:text;color:transparent}
+.roleline{font-size:clamp(14px,1.7vw,19px);font-weight:500;color:rgba(245,245,247,.75);margin-top:18px}
+.roleline i{font-style:normal;color:var(--red-2);margin:0 8px}
+.lead{color:var(--muted);font-size:clamp(17px,1.7vw,21px);max-width:640px;margin:22px auto 0}
+.lead-emph{font-size:clamp(18px,1.9vw,24px);font-weight:600;color:var(--ink);max-width:660px;margin:14px auto 0;letter-spacing:-.02em}
+.hero .actions{margin-top:30px}
+.herobento{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:var(--gap);margin-top:clamp(36px,4.5vw,58px)}
+.photo{position:relative;border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--line);box-shadow:0 50px 110px -46px rgba(0,0,0,.95),var(--hi);min-height:520px;background:#0b0e14}
+.photo img{position:absolute;inset:0;width:100%;height:118%;object-fit:cover;object-position:center 14%;will-change:transform}
+.photo .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04),transparent 26%),linear-gradient(0deg,rgba(5,6,8,.7),transparent 42%)}
+.photo .num{position:absolute;right:16px;bottom:6px;font-size:clamp(120px,15vw,200px);font-weight:700;line-height:.66;letter-spacing:-.06em;color:rgba(255,255,255,.96);text-shadow:0 24px 60px rgba(0,0,0,.55)}
+.photo .flag{position:absolute;left:16px;top:16px;display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;font-size:12px;font-weight:600}
+.photo .flag .d{width:7px;height:7px;border-radius:50%;background:var(--ice);box-shadow:0 0 9px var(--ice)}
+.photo .roles{position:absolute;left:16px;bottom:18px;padding:12px 15px;border-radius:16px}
+.photo .roles small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+.photo .roles b{font-size:14.5px;font-weight:600;letter-spacing:.02em}
+.bento-right{display:grid;grid-template-rows:auto auto;gap:var(--gap)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.fact{padding:22px;border-radius:var(--r-lg)}
+.fact .v{font-size:clamp(30px,3.4vw,42px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.fact .v small{font-size:.46em;font-weight:600;color:var(--muted);margin-left:2px}
+.fact .k{display:block;color:var(--soft);font-size:13px;margin-top:10px}
+.hl{padding:24px;border-radius:var(--r-lg);display:flex;flex-direction:column;justify-content:center;gap:8px}
+.hl .big{font-size:clamp(20px,2vw,26px);font-weight:600;letter-spacing:-.02em}
+.hl .big em{font-style:normal;background:linear-gradient(120deg,var(--red-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hl p{color:var(--muted);font-size:14.5px}
+
+/* feature */
+.feature{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--gap);align-items:start}
+.panel{padding:var(--pad);border-radius:var(--r-lg)}
+.panel h3{font-size:22px;margin-bottom:14px}
+.panel p{color:var(--muted);margin-bottom:14px}
+.panel p:last-child{margin-bottom:0}
+.note{margin-top:18px;padding:16px 18px;border-radius:var(--r);background:linear-gradient(120deg,rgba(255,69,58,.15),rgba(255,69,58,.04));border:1px solid rgba(255,107,98,.24)}
+.note strong{display:block;font-size:14px;margin-bottom:5px}
+.note span{color:rgba(245,245,247,.8);font-size:14.5px}
+.why{display:grid;gap:12px}
+.why .it{display:flex;gap:14px;align-items:flex-start}
+.why .n{flex:0 0 auto;width:36px;height:36px;border-radius:11px;display:grid;place-items:center;font-weight:700;font-size:14px;color:#fff;background:linear-gradient(135deg,var(--red-2),var(--red-deep));box-shadow:var(--hi)}
+.why b{display:block;font-size:15px;font-weight:600;margin-bottom:3px}
+.why p{color:var(--muted);font-size:14px;line-height:1.45}
+
+/* STORY */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.story .col p{color:var(--muted);margin-bottom:15px;font-size:16px;line-height:1.65}
+.story .col p b{color:var(--ink);font-weight:600}
+.pull{grid-column:1/-1;padding:clamp(26px,3.4vw,40px);border-radius:var(--r-lg);text-align:center;margin-top:4px}
+.pull q{font-size:clamp(20px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.3;quotes:none}
+.pull q::before,.pull q::after{content:""}
+.pull .by{display:block;color:var(--soft);font-size:13px;margin-top:14px}
+
+/* heatmap */
+.roles-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--gap);align-items:stretch}
+.heatcard{padding:var(--pad);border-radius:var(--r-lg);display:flex;flex-direction:column;gap:14px}
+.pitch{position:relative;width:100%;aspect-ratio:105/68;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(90deg,#14633a 0 12.5%,#125b34 12.5% 25%);border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 0 70px rgba(0,0,0,.45)}
+.pitch .lines{position:absolute;inset:0;z-index:1}
+.pitch .lines::before{content:"";position:absolute;inset:6%;border:1.5px solid rgba(255,255,255,.45);border-radius:3px}
+.pitch .lines::after{content:"";position:absolute;left:50%;top:6%;bottom:6%;width:1.5px;background:rgba(255,255,255,.45);transform:translateX(-50%)}
+.pitch .ctr{position:absolute;left:50%;top:50%;width:15%;aspect-ratio:1;border:1.5px solid rgba(255,255,255,.45);border-radius:50%;transform:translate(-50%,-50%);z-index:1}
+.pitch .pbox{position:absolute;top:30%;bottom:30%;width:10%;border:1.5px solid rgba(255,255,255,.45);z-index:1}
+.pitch .pbox.l{left:6%;border-left:0}.pitch .pbox.rt{right:6%;border-right:0}
+.heat{position:absolute;inset:0;mix-blend-mode:screen;filter:blur(8px);animation:breathe 5s var(--ease) infinite alternate;z-index:0;
+  background:
+   radial-gradient(15% 22% at 52% 50%,rgba(255,255,255,.95),rgba(255,214,10,.7) 46%,transparent 74%),
+   radial-gradient(16% 22% at 60% 47%,rgba(255,150,60,.6),transparent 68%),
+   radial-gradient(15% 20% at 40% 51%,rgba(255,130,90,.5),transparent 68%),
+   radial-gradient(13% 18% at 67% 45%,rgba(255,110,80,.46),transparent 68%),
+   radial-gradient(13% 16% at 72% 75%,rgba(255,120,90,.4),transparent 68%),
+   radial-gradient(12% 15% at 33% 73%,rgba(100,210,255,.4),transparent 68%),
+   radial-gradient(70% 80% at 54% 52%,rgba(48,120,255,.14),transparent 78%)}
+@keyframes breathe{to{filter:blur(10px);opacity:.92}}
+.zone{position:absolute;z-index:2;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:4px;pointer-events:none}
+.zone .pt{width:11px;height:11px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.18),0 2px 6px rgba(0,0,0,.5)}
+.zone .lb{font-size:10.5px;font-weight:700;letter-spacing:.02em;color:#fff;background:rgba(0,0,0,.42);padding:3px 8px;border-radius:999px;backdrop-filter:blur(6px);white-space:nowrap}
+.atk{position:absolute;top:8px;right:10px;z-index:3;font-size:10.5px;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.8);text-transform:uppercase}
+.goal{position:absolute;top:42%;bottom:42%;width:6px;border:1.5px solid rgba(255,255,255,.5);z-index:1}
+.goal.l{left:2.5%;border-right:0}.goal.rt{right:2.5%;border-left:0}
+.legend{display:flex;align-items:center;gap:12px;color:var(--soft);font-size:12px}
+.legend .bar{flex:1;height:7px;border-radius:999px;background:linear-gradient(90deg,rgba(100,210,255,.5),rgba(255,140,70,.7),rgba(255,214,10,.95),#fff)}
+.rolelist{padding:var(--pad);border-radius:var(--r-lg);display:grid;gap:10px;align-content:center}
+.role{display:flex;gap:13px;align-items:flex-start;padding:14px 15px;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid var(--line-2);transition:.3s var(--ease)}
+.role:hover{background:rgba(255,255,255,.08);transform:translateX(4px)}
+.role .b{flex:0 0 auto;min-width:56px;height:48px;border-radius:13px;display:grid;place-items:center;font-weight:700;font-size:12.5px;color:#0a0c12;background:linear-gradient(135deg,#fff,rgba(255,255,255,.78))}
+.role b{display:block;font-size:15px;font-weight:600;margin-bottom:3px}
+.role p{color:var(--muted);font-size:13.5px;line-height:1.45}
+
+/* recognition */
+.bento4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.rec{padding:24px 22px;border-radius:var(--r-lg)}
+.rec .ic{font-size:24px;font-weight:700;margin-bottom:16px;background:linear-gradient(120deg,#fff,#ffc9c5);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rec b{display:block;font-size:15.5px;font-weight:600;margin-bottom:7px;line-height:1.25}
+.rec p{color:var(--muted);font-size:13.5px;line-height:1.5}
+
+/* pathway */
+.timeline{display:grid;gap:12px}
+.row{display:grid;grid-template-columns:78px 1fr;gap:18px;align-items:center}
+.yr{font-size:clamp(32px,3.6vw,44px);font-weight:700;letter-spacing:-.04em;line-height:.85;text-align:right;background:linear-gradient(180deg,#fff,#ffb0aa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.path{display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:center;padding:15px 18px;border-radius:var(--r)}
+.lbox{width:60px;height:60px;border-radius:15px;display:grid;place-items:center;flex:0 0 auto;background:rgba(255,255,255,.04);border:1px solid var(--line-2);overflow:hidden}
+.lbox img{max-width:88%;max-height:88%;object-fit:contain}
+.path h3{font-size:16px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.path p{color:var(--muted);font-size:13.5px;line-height:1.45}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:10.5px;font-weight:600}
+.tag.past{background:rgba(255,255,255,.07);border:1px solid var(--line-2);color:var(--muted)}
+/* CURRENT: breathing glow */
+.tag.live{background:rgba(48,209,88,.14);border:1px solid rgba(48,209,88,.42);color:#b6f7cd;
+  animation:liveGlow 2.4s var(--ease) infinite}
+.tag.live .d{width:6px;height:6px;border-radius:50%;background:var(--jade);animation:liveDot 2.4s var(--ease) infinite}
+@keyframes liveGlow{0%,100%{box-shadow:0 0 0 0 rgba(48,209,88,0),0 0 6px rgba(48,209,88,.25);border-color:rgba(48,209,88,.34)}
+  50%{box-shadow:0 0 18px 2px rgba(48,209,88,.55),0 0 30px rgba(48,209,88,.3);border-color:rgba(48,209,88,.85)}}
+@keyframes liveDot{0%,100%{box-shadow:0 0 4px 0 var(--jade);opacity:.7}50%{box-shadow:0 0 12px 3px var(--jade);opacity:1}}
+
+/* METRICS (enlarged + article) */
+.metric-article{padding:var(--pad);border-radius:var(--r-lg);margin-bottom:var(--gap);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start}
+.metric-article h3{font-size:clamp(20px,2vw,26px);margin-bottom:12px}
+.metric-article p{color:var(--muted);font-size:15.5px;line-height:1.65;margin-bottom:12px;max-width:780px}
+.metric-article p:last-of-type{margin-bottom:0}
+.metric-article .joy{width:88px;height:88px;border-radius:22px;flex:0 0 auto;box-shadow:0 18px 40px -16px rgba(48,209,88,.5)}
+.signals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.signal{padding:16px;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid var(--line-2)}
+.signal small{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-bottom:8px}
+.signal strong{display:block;font-size:18px;font-weight:600;margin-bottom:6px}
+.signal span{color:var(--muted);font-size:13.5px;line-height:1.45}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.metric{padding:18px 18px 16px;border-radius:var(--r-lg)}
+.metric .t{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:14px}
+.metric .t b{font-size:14px;font-weight:600}
+.metric .t span{color:var(--soft);font-size:11.5px;font-weight:500}
+.cmp{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;margin:10px 0;color:var(--soft);font-size:11px}
+.cmp .val{text-align:right;color:var(--ink);font-size:17px;font-weight:700;letter-spacing:-.02em;min-width:62px}
+.bar{height:10px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:999px;transition:width 1.4s var(--ease)}
+.mgrid.in .bar i.best{width:var(--best);background:linear-gradient(90deg,var(--ice),var(--jade))}
+.mgrid.in .bar i.avg{width:var(--avg);background:linear-gradient(90deg,rgba(255,255,255,.3),var(--gold))}
+.mfoot{margin-top:var(--gap);color:var(--soft);font-size:12.5px;line-height:1.55}
+
+/* tournaments (clickable + proof link) */
+.tours{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.tour{display:flex;gap:16px;align-items:center;padding:20px;border-radius:var(--r-lg)}
+.tour .tl{width:78px;height:64px;border-radius:14px;flex:0 0 auto;display:grid;place-items:center;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid var(--line-2)}
+.tour .tl img{max-width:86%;max-height:86%;object-fit:contain}
+.tour h3{font-size:16px;font-weight:600;margin-bottom:4px}
+.tour p{color:var(--muted);font-size:13.5px;line-height:1.45;margin-bottom:9px}
+.proof{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ice)}
+.proof .pdf{font-size:9px;font-weight:700;letter-spacing:.06em;padding:3px 6px;border-radius:6px;background:rgba(100,210,255,.16);border:1px solid rgba(100,210,255,.32);color:#bfeaff}
+.proof .a{transition:transform .3s var(--ease)}.tour:hover .proof .a{transform:translateX(3px)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.chip2{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line-2);font-size:13px;font-weight:500;color:var(--muted)}
+.chip2 .y{font-weight:700;color:var(--red-2)}
+
+/* video (vertical shorts) */
+.video{position:relative;width:100%;max-width:392px;margin-inline:auto;aspect-ratio:9/16;border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--line);box-shadow:var(--drop),var(--hi);background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* gallery (symmetric, no captions) */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 52px -32px rgba(0,0,0,.9);background:#0b0e14;aspect-ratio:3/2}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.tile:hover img{transform:scale(1.05)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,6,8,.28),transparent 60%);opacity:0;transition:.4s}
+.tile:hover::after{opacity:1}
+
+/* cta */
+.cta{position:relative;padding:clamp(40px,6vw,64px) var(--pad);border-radius:var(--r-xl);text-align:center;overflow:hidden}
+.cta::after{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(80% 130% at 50% -20%,rgba(255,69,58,.28),transparent 60%)}
+.cta>*{position:relative;z-index:2}
+.cta h2{font-size:clamp(28px,4vw,52px);margin:14px auto 16px;max-width:760px;background:linear-gradient(180deg,#fff,#e4cfcf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta p{color:var(--muted);max-width:580px;margin:0 auto 28px;font-size:17px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--gap);align-items:start}
+.contact .panel a{border-bottom:1px solid rgba(255,255,255,.3);transition:.25s}
+.contact .panel a:hover{border-color:#fff}
+form{display:grid;gap:11px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+input,textarea{width:100%;border:1px solid var(--line);background:rgba(0,0,0,.26);color:var(--ink);border-radius:var(--r);padding:15px 16px;font-family:inherit;font-size:15px;outline:none;transition:.25s}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{border-color:rgba(255,255,255,.4);background:rgba(0,0,0,.36);box-shadow:0 0 0 4px rgba(100,210,255,.12)}
+input::placeholder,textarea::placeholder{color:var(--soft)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;color:var(--soft);font-size:13px;padding-block:34px 52px}
+footer b{color:rgba(245,245,247,.82);font-weight:600}
+
+/* responsive */
+@media (max-width:1000px){
+  .herobento,.feature,.roles-wrap,.contact,.story{grid-template-columns:1fr}
+  .menu{display:none}
+  .bento4{grid-template-columns:1fr 1fr}
+  .mgrid{grid-template-columns:1fr 1fr}
+  .metric-article{grid-template-columns:1fr}
+  .photo{min-height:460px}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .head,.sub{max-width:none}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{width:min(100% - 28px,var(--container))}
+  .facts,.signals,.mgrid,.tours,.chips,.frow{grid-template-columns:1fr}
+  .bento4,.gal{grid-template-columns:1fr}
+  .row{grid-template-columns:54px 1fr;gap:12px}
+  .path{grid-template-columns:54px 1fr;padding:14px}
+  .lbox{width:54px;height:54px}
+  .photo .num{font-size:96px}
+}
+/* sub-heading divider */
+.subhead{display:flex;align-items:center;gap:14px;margin:calc(var(--sec)*.55) 0 var(--gap)}
+.subhead h3{font-size:clamp(20px,2.2vw,28px);font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.subhead .ln{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.subhead .meta{color:var(--soft);font-size:13px;font-weight:500;white-space:nowrap}
+.grid-label{color:var(--soft);font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+
+/* latest session */
+@property --p{syntax:'<number>';inherits:false;initial-value:0}
+.latest{padding:var(--pad);border-radius:var(--r-lg)}
+.latest-top{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--line-2);margin-bottom:24px}
+.grade{display:flex;align-items:center;gap:18px}
+.grade .g{font-size:clamp(52px,7vw,80px);font-weight:700;letter-spacing:-.04em;line-height:.8;background:linear-gradient(180deg,#8cf3b0,#30d158);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grade .g sup{font-size:.5em;vertical-align:super}
+.grade .gmeta .sc{font-size:23px;font-weight:700}
+.grade .gmeta .sc small{color:var(--soft);font-size:.62em;font-weight:600}
+.grade .gmeta .beat{display:inline-flex;align-items:center;gap:7px;margin-top:9px;font-size:12.5px;font-weight:600;color:#a6f7c4;background:rgba(48,209,88,.12);border:1px solid rgba(48,209,88,.32);padding:5px 11px;border-radius:999px}
+.grade .gmeta .beat .d{width:6px;height:6px;border-radius:50%;background:var(--jade);box-shadow:0 0 8px var(--jade)}
+.sess-meta{display:flex;gap:26px;flex-wrap:wrap;justify-content:flex-end;text-align:right}
+.sess-meta .mi small{display:block;color:var(--soft);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.sess-meta .mi b{font-size:18px;font-weight:700;letter-spacing:-.01em}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.score{display:flex;flex-direction:column;align-items:center;gap:11px;text-align:center}
+.ring{width:96px;height:96px;border-radius:50%;position:relative;display:grid;place-items:center;
+  background:conic-gradient(var(--acc) calc(var(--p)*1%),rgba(255,255,255,.09) 0);transition:--p 1.4s var(--ease)}
+.ring::before{content:"";position:absolute;inset:8px;border-radius:50%;background:#0b0e15}
+.ring .rv{position:relative;z-index:1;font-size:24px;font-weight:700;letter-spacing:-.02em}
+.scores.in .ring{--p:var(--val)}
+.score .lbl{font-size:13px;color:var(--muted);font-weight:600}
+.session-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:var(--gap);margin-top:var(--gap)}
+.scard{padding:20px;border-radius:var(--r-lg)}
+.scard .ch{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.scard .ch .cd{width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px var(--acc)}
+.scard .ch b{font-size:15px;font-weight:600}
+.srow{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:9px 0;border-top:1px solid var(--line-2)}
+.srow:first-of-type{border-top:0}
+.srow span{color:var(--muted);font-size:13.5px}
+.srow b{font-size:17px;font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+.srow b small{font-size:.62em;color:var(--soft);font-weight:600;margin-left:2px}
+.footbar{height:10px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.08);display:flex;margin:4px 0 10px}
+.footbar i{height:100%}
+.footbar .lf{background:linear-gradient(90deg,#64d2ff,#0a84ff)}
+.footbar .rf{background:linear-gradient(90deg,#ffd60a,#ff8a3d)}
+
+/* partner logos (footage captured with) */
+.partners{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-2)}
+.plabel{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-bottom:14px}
+.plogos{display:flex;align-items:center;gap:20px}
+.plogo{width:62px;height:62px;display:grid;place-items:center;flex:0 0 auto}
+.plogo img{max-width:100%;max-height:100%;object-fit:contain}
+
+/* multi video (shorts) */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);max-width:940px;margin-inline:auto}
+.vcard{position:relative;width:100%;aspect-ratio:9/16;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--drop),var(--hi);background:#000}
+.vcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+@media (max-width:860px){.videos{grid-template-columns:1fr 1fr;max-width:560px}}
+@media (max-width:760px){.scores{grid-template-columns:repeat(3,1fr);gap:18px}.latest-top{grid-template-columns:1fr}.sess-meta{justify-content:flex-start;text-align:left}}
+@media (max-width:560px){.videos{grid-template-columns:1fr;max-width:380px}.scores{grid-template-columns:repeat(2,1fr)}}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .r{opacity:1;transform:none}
+  .mgrid .bar i.best{width:var(--best)}.mgrid .bar i.avg{width:var(--avg)}
+  .scores .ring{--p:var(--val)}
+}
+</style>
+</head>
+<body data-lang="en">
+<div class="bg"></div><div class="aurora"></div><div class="grid-tex"></div><div class="lightfollow"></div><div class="noise"></div>
+<div class="progress" id="progress"></div>
+
+<header class="wrap">
+  <nav class="nav glass">
+    <a class="brand" href="#top">
+      <span class="logo"><img src="assets/images/db10-logo-white.png" alt="DB10"></span>
+      <span class="t"><small data-en="Talent Profile" data-id="Profil Talenta">Talent Profile</small><strong>Dipta Budiman</strong></span>
+    </a>
+    <div class="nav-r">
+      <div class="menu">
+        <a href="#profile" data-en="Profile" data-id="Profil">Profile</a>
+        <a href="#story" data-en="Story" data-id="Cerita">Story</a>
+        <a href="#roles" data-en="Roles" data-id="Peran">Roles</a>
+        <a href="#pathway" data-en="Pathway" data-id="Pathway">Pathway</a>
+        <a href="#data" data-en="Data" data-id="Data">Data</a>
+        <a href="#gallery" data-en="Gallery" data-id="Galeri">Gallery</a>
+        <a href="#contact" data-en="Contact" data-id="Kontak">Contact</a>
+      </div>
+      <div class="lang"><button class="on" data-set="en">EN</button><button data-set="id">ID</button></div>
+    </div>
+  </nav>
+</header>
+
+<main id="top" class="wrap">
+
+  <!-- HERO -->
+  <section class="hero center">
+    <span class="eyebrow r"><span class="dot"></span><span data-en="Youth Talent · Born 2015" data-id="Talenta Usia Dini · Lahir 2015">Youth Talent · Born 2015</span></span>
+    <h1 class="h1 r d1">Maharddhika Daniswara Budiman</h1>
+    <p class="roleline r d1">Dipta<i>·</i>No. 10<i>·</i><span data-en="Midfield Intelligence" data-id="Otak Lini Tengah">Midfield Intelligence</span></p>
+    <p class="lead r d2" data-en="A versatile midfielder already operating inside Indonesia's elite youth pathway. He reads the game early, receives under pressure and chooses the pass that moves a team forward." data-id="Gelandang serbabisa yang sudah bergerak di jalur pembinaan elite usia dini Indonesia. Ia membaca permainan lebih awal, menerima bola di bawah tekanan, dan memilih operan yang membawa tim maju.">A versatile midfielder already operating inside Indonesia's elite youth pathway. He reads the game early, receives under pressure and chooses the pass that moves a team forward.</p>
+    <p class="lead-emph r d2" data-en="The question is no longer whether Dipta belongs at a higher level. It is which club develops him there." data-id="Pertanyaannya bukan lagi apakah Dipta layak naik level, tetapi klub mana yang akan mengembangkannya.">The question is no longer whether Dipta belongs at a higher level. It is which club develops him there.</p>
+    <div class="actions r d3">
+      <a class="btn solid" href="#video"><span data-en="Watch Highlights" data-id="Lihat Highlights">Watch Highlights</span><span class="a">&rarr;</span></a>
+      <a class="btn" href="#roles" data-en="Playing Profile" data-id="Profil Bermain">Playing Profile</a>
+      <a class="btn red" href="#contact" data-en="Selection Enquiry" data-id="Ajukan Trial">Selection Enquiry</a>
+    </div>
+
+    <div class="herobento" style="text-align:left">
+      <figure class="photo glass tilt r d2" id="photo">
+        <img id="photoImg" src="assets/images/hero-dipta.webp" alt="Maharddhika Daniswara Budiman in national colours">
+        <div class="veil"></div>
+        <span class="flag glass"><span class="d"></span><span data-en="Currently being tracked" data-id="Sedang dipantau">Currently being tracked</span></span>
+        <div class="roles glass"><small data-en="Playing Roles" data-id="Posisi Bermain">Playing Roles</small><b>CM · CDM · CAM · RB · RW</b></div>
+        <div class="num">10</div>
+      </figure>
+      <div class="bento-right">
+        <div class="facts">
+          <div class="fact glass tilt r d2"><div class="v">2015</div><span class="k" data-en="Birth Year" data-id="Tahun Lahir">Birth Year</span></div>
+          <div class="fact glass tilt r d3"><div class="v"><span data-count="136">136</span><small>cm</small></div><span class="k" data-en="Height · May '26" data-id="Tinggi · Mei '26">Height · May '26</span></div>
+          <div class="fact glass tilt r d3"><div class="v"><span data-count="34.5" data-dec="1">34.5</span><small>kg</small></div><span class="k" data-en="Weight · May '26" data-id="Berat · Mei '26">Weight · May '26</span></div>
+          <div class="fact glass tilt r d4"><div class="v" data-en="Right" data-id="Kanan">Right</div><span class="k" data-en="Preferred Foot" data-id="Kaki Dominan">Preferred Foot</span></div>
+        </div>
+        <div class="hl glass tilt r d4">
+          <div class="big"><em data-en="4 elite environments," data-id="4 lingkungan elite,">4 elite environments,</em> <span data-en="simultaneously." data-id="secara simultan.">simultaneously.</span></div>
+          <p data-en="Active across RIFA, STY FC Academy, ASIOP FC Academy and Garuda Muda Indonesia. A structured pathway, not yearly club-hopping." data-id="Aktif di RIFA, STY FC Academy, ASIOP FC Academy, dan Garuda Muda Indonesia. Jalur terstruktur, bukan berpindah klub tiap tahun.">Active across RIFA, STY FC Academy, ASIOP FC Academy and Garuda Muda Indonesia. A structured pathway, not yearly club-hopping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile" class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="The Profile" data-id="Profil">The Profile</div>
+      <h2 class="h2" data-en="A profile clubs are already tracking." data-id="Profil yang sudah dipantau banyak klub.">A profile clubs are already tracking.</h2>
+      <p class="sub" data-en="A scouting reference prepared for coaches, academies and clubs evaluating long-term youth talent. Not an open application." data-id="Referensi scouting untuk pelatih, akademi, dan klub yang menilai talenta jangka panjang. Bukan lamaran terbuka.">A scouting reference prepared for coaches, academies and clubs evaluating long-term youth talent. Not an open application.</p>
+    </div>
+    <div class="feature">
+      <div class="panel glass tilt r">
+        <h3 data-en="The Player" data-id="Sang Pemain">The Player</h3>
+        <p data-en="Maharddhika Daniswara Budiman, known as Dipta, is a midfield intelligence built through layered exposure rather than a single environment. He is most naturally a central player, equally credible protecting deeper midfield space, linking attacking combinations, covering the right-back channel or stretching the game as a right winger." data-id="Maharddhika Daniswara Budiman, dikenal sebagai Dipta, adalah gelandang cerdas yang dibentuk dari eksposur berlapis, bukan satu lingkungan saja. Ia paling natural sebagai pemain sentral, sama meyakinkannya saat menjaga ruang gelandang bertahan, menghubungkan kombinasi serangan, menutup channel bek kanan, atau melebarkan permainan sebagai right winger.">Maharddhika Daniswara Budiman, known as Dipta, is a midfield intelligence built through layered exposure rather than a single environment. He is most naturally a central player, equally credible protecting deeper midfield space, linking attacking combinations, covering the right-back channel or stretching the game as a right winger.</p>
+        <p data-en="His value is not flash. It is clarity, technical security and decision-making under pressure. For any team that prizes intelligent movement, he is precisely the kind of profile that becomes harder to sign with every season he keeps progressing." data-id="Nilainya bukan aksi mencolok, melainkan kejernihan keputusan, keamanan teknik, dan pengambilan keputusan di bawah tekanan. Bagi tim yang menghargai pergerakan cerdas, ia justru tipe profil yang semakin sulit didapat setiap musim ia terus berkembang.">His value is not flash. It is clarity, technical security and decision-making under pressure. For any team that prizes intelligent movement, he is precisely the kind of profile that becomes harder to sign with every season he keeps progressing.</p>
+        <div class="note">
+          <strong data-en="Current context" data-id="Konteks saat ini">Current context</strong>
+          <span data-en="A structured elite pathway across several high-level environments at once, designed for breadth of coaching without losing continuity." data-id="Jalur elite terstruktur di beberapa lingkungan tingkat tinggi sekaligus, dirancang untuk keluasan pembinaan tanpa kehilangan kontinuitas.">A structured elite pathway across several high-level environments at once, designed for breadth of coaching without losing continuity.</span>
+        </div>
+      </div>
+      <div class="panel glass tilt r d1">
+        <h3 data-en="Why act early" data-id="Kenapa lebih awal">Why act early</h3>
+        <div class="why">
+          <div class="it"><span class="n">01</span><div><b data-en="Fits any model" data-id="Cocok di model apa pun">Fits any model</b><p data-en="Five credible roles across central, deep and wide zones." data-id="Lima peran kredibel di area tengah, dalam, dan sayap.">Five credible roles across central, deep and wide zones.</p></div></div>
+          <div class="it"><span class="n">02</span><div><b data-en="Inside the national funnel" data-id="Sudah masuk corong nasional">Inside the national funnel</b><p data-en="Called up to the student national team while still ten." data-id="Dipanggil ke timnas pelajar saat masih berusia sepuluh tahun.">Called up to the student national team while still ten.</p></div></div>
+          <div class="it"><span class="n">03</span><div><b data-en="A developing window" data-id="Jendela pembinaan">A developing window</b><p data-en="The club that shapes the next phase gains the most upside." data-id="Klub yang membentuk fase berikutnya memperoleh potensi terbesar.">The club that shapes the next phase gains the most upside.</p></div></div>
+          <div class="it"><span class="n">04</span><div><b data-en="Limited availability" data-id="Ketersediaan terbatas">Limited availability</b><p data-en="Access narrows as elite commitments deepen." data-id="Akses menyempit seiring komitmen elite yang menguat.">Access narrows as elite commitments deepen.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="The Journey" data-id="Perjalanan">The Journey</div>
+      <h2 class="h2" data-en="Built layer by layer, since age three." data-id="Dibangun lapis demi lapis, sejak usia tiga.">Built layer by layer, since age three.</h2>
+      <p class="sub" data-en="The story of how a young midfielder learned to understand the game from many angles." data-id="Kisah bagaimana seorang gelandang muda belajar memahami permainan dari berbagai sudut.">The story of how a young midfielder learned to understand the game from many angles.</p>
+    </div>
+    <div class="story">
+      <div class="col">
+        <p class="r" data-en="Dipta started early. In 2018, at only three years old, he joined Banana Kicks in Jakarta, where football first became a structured part of his daily growth. In 2019 he widened his grassroots experience with Buffalo FC, before the Covid-19 pandemic briefly paused youth football." data-id="Dipta memulai sejak dini. Pada 2018, di usia tiga tahun, ia bergabung dengan Banana Kicks di Jakarta, tempat sepak bola pertama kali menjadi bagian terstruktur dari pertumbuhannya. Pada 2019 ia memperluas pengalaman grassroots bersama Buffalo FC, sebelum pandemi Covid-19 sempat menghentikan aktivitas usia dini.">Dipta started early. In 2018, at only three years old, he joined Banana Kicks in Jakarta, where football first became a structured part of his daily growth. In 2019 he widened his grassroots experience with Buffalo FC, before the Covid-19 pandemic briefly paused youth football.</p>
+        <p class="r" data-en="From 2022 he developed at Brazilian Soccer Schools Indonesia, through the Senayan and Menteng environments. This was the technical core of his game: ball mastery, creativity, dribbling confidence and small-sided decision-making. He was named Best Player at the BSS Holiday Camp 2023, joined the BSS Regional Team in 2025, and stayed connected to BSS until early 2026." data-id="Sejak 2022 ia berkembang di Brazilian Soccer Schools Indonesia, melalui lingkungan Senayan dan Menteng. Inilah inti teknik permainannya: ball mastery, kreativitas, kepercayaan diri menggiring, dan pengambilan keputusan small-sided. Ia dinobatkan sebagai Best Player di BSS Holiday Camp 2023, masuk Tim Regional BSS pada 2025, dan tetap terhubung dengan BSS hingga awal 2026.">From 2022 he developed at Brazilian Soccer Schools Indonesia, through the Senayan and Menteng environments. This was the technical core of his game: ball mastery, creativity, dribbling confidence and small-sided decision-making. He was named Best Player at the BSS Holiday Camp 2023, joined the BSS Regional Team in 2025, and stayed connected to BSS until early 2026.</p>
+        <p class="r" data-en="In 2024 he was invited to the Royal Indonesia Football Academy, associated with the Real Madrid Foundation methodology, validating his central-midfield profile. In 2025 he was selected to the STY FC Academy elite team and the ASIOP FC Academy semi-elite and elite team, raising his training standards and tactical demands." data-id="Pada 2024 ia diundang ke Royal Indonesia Football Academy, yang terkait dengan metodologi Real Madrid Foundation, memvalidasi profilnya sebagai gelandang tengah. Pada 2025 ia terpilih ke elite team STY FC Academy serta tim semi-elite dan elite ASIOP FC Academy, menaikkan standar latihan dan tuntutan taktiknya.">In 2024 he was invited to the Royal Indonesia Football Academy, associated with the Real Madrid Foundation methodology, validating his central-midfield profile. In 2025 he was selected to the STY FC Academy elite team and the ASIOP FC Academy semi-elite and elite team, raising his training standards and tactical demands.</p>
+      </div>
+      <div class="col">
+        <p class="r" data-en="His pathway is best read as simultaneous, not sequential. As of 2026 he is active across RIFA, STY, ASIOP and Garuda Muda Indonesia at once, gaining breadth of coaching, competition and tactical references without losing continuity." data-id="Jalurnya paling tepat dibaca sebagai simultan, bukan berurutan. Per 2026 ia aktif di RIFA, STY, ASIOP, dan Garuda Muda Indonesia sekaligus, memperoleh keluasan pembinaan, kompetisi, dan referensi taktik tanpa kehilangan kontinuitas.">His pathway is best read as simultaneous, not sequential. As of 2026 he is active across RIFA, STY, ASIOP and Garuda Muda Indonesia at once, gaining breadth of coaching, competition and tactical references without losing continuity.</p>
+        <p class="r" data-en="His international exposure keeps growing. In 2025 he played KFAM Kuala Lumpur with STY and the Milo Challenger Cup Kuala Lumpur with the BSS Regional Team. In 2026 he was called up by Garuda Muda Indonesia for the MAXIM Cup KL and listed for the Piala Dunia Anak Indonesia." data-id="Eksposur internasionalnya terus bertambah. Pada 2025 ia tampil di KFAM Kuala Lumpur bersama STY dan Milo Challenger Cup Kuala Lumpur bersama Tim Regional BSS. Pada 2026 ia dipanggil Garuda Muda Indonesia untuk MAXIM Cup KL dan terdaftar di Piala Dunia Anak Indonesia.">His international exposure keeps growing. In 2025 he played KFAM Kuala Lumpur with STY and the Milo Challenger Cup Kuala Lumpur with the BSS Regional Team. In 2026 he was called up by Garuda Muda Indonesia for the MAXIM Cup KL and listed for the Piala Dunia Anak Indonesia.</p>
+        <p class="r" data-en="He also leads. As captain at Global Sevilla Pulomas he guided his school team to repeated success and was twice named Best Player of the Tournament. His next growth areas are natural for his profile: physical presence, progressive risk-taking, end-product consistency and left-foot execution. The foundation is already visible." data-id="Ia juga seorang pemimpin. Sebagai kapten di Global Sevilla Pulomas, ia membawa tim sekolahnya meraih sukses berulang dan dua kali dinobatkan sebagai Pemain Terbaik Turnamen. Area pengembangan berikutnya wajar untuk profilnya: kehadiran fisik, keberanian mengambil risiko progresif, konsistensi end-product, dan eksekusi kaki kiri. Fondasinya sudah terlihat.">He also leads. As captain at Global Sevilla Pulomas he guided his school team to repeated success and was twice named Best Player of the Tournament. His next growth areas are natural for his profile: physical presence, progressive risk-taking, end-product consistency and left-foot execution. The foundation is already visible.</p>
+      </div>
+      <div class="pull glass tilt r">
+        <q data-en="He can connect, cover, create and compete. A player learning to understand the game from different angles, and one worth monitoring closely." data-id="Ia bisa menghubungkan, menutup, menciptakan, dan bersaing. Pemain yang sedang belajar memahami permainan dari berbagai sudut, dan layak dipantau dengan serius.">He can connect, cover, create and compete. A player learning to understand the game from different angles, and one worth monitoring closely.</q>
+        <span class="by" data-en="On Dipta's profile" data-id="Tentang profil Dipta">On Dipta's profile</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES / HEATMAP -->
+  <section id="roles" class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="Playing Profile" data-id="Profil Bermain">Playing Profile</div>
+      <h2 class="h2" data-en="Where he plays, and how it connects." data-id="Di mana ia bermain, dan bagaimana terhubung.">Where he plays, and how it connects.</h2>
+      <p class="sub" data-en="A heatmap of his operating zones with each role mapped to the pitch. Intensity is central, with a forward and right-leaning bias." data-id="Heatmap zona operasinya dengan tiap peran dipetakan ke lapangan. Intensitas terpusat di tengah, condong maju dan ke kanan.">A heatmap of his operating zones with each role mapped to the pitch. Intensity is central, with a forward and right-leaning bias.</p>
+    </div>
+    <div class="roles-wrap">
+      <div class="heatcard glass tilt r">
+        <div class="pitch" aria-label="Operating-zone heatmap with positions">
+          <div class="lines"></div><span class="ctr"></span><span class="goal l"></span><span class="goal rt"></span><span class="pbox l"></span><span class="pbox rt"></span>
+          <div class="heat"></div>
+          <span class="atk" data-en="Attack &rarr;" data-id="Serang &rarr;">Attack &rarr;</span>
+          <div class="zone" style="left:40%;top:50%"><span class="pt"></span><span class="lb">CDM</span></div>
+          <div class="zone" style="left:53%;top:50%"><span class="pt"></span><span class="lb">CM</span></div>
+          <div class="zone" style="left:66%;top:45%"><span class="pt"></span><span class="lb">CAM</span></div>
+          <div class="zone" style="left:33%;top:75%"><span class="pt"></span><span class="lb">RB</span></div>
+          <div class="zone" style="left:72%;top:76%"><span class="pt"></span><span class="lb">RW</span></div>
+        </div>
+        <div class="legend"><span data-en="Low" data-id="Rendah">Low</span><span class="bar"></span><span data-en="High" data-id="Tinggi">High</span></div>
+      </div>
+      <div class="rolelist glass tilt r d1">
+        <div class="role"><span class="b">CM</span><div><b data-en="Central Midfielder" data-id="Gelandang Tengah">Central Midfielder</b><p data-en="Connects phases, controls tempo, reads pressure before receiving." data-id="Menghubungkan fase, mengatur tempo, membaca tekanan sebelum menerima.">Connects phases, controls tempo, reads pressure before receiving.</p></div></div>
+        <div class="role"><span class="b">CDM</span><div><b data-en="Defensive Midfielder" data-id="Gelandang Bertahan">Defensive Midfielder</b><p data-en="Protects central space through anticipation and angle management." data-id="Menjaga ruang tengah lewat antisipasi dan pengaturan sudut.">Protects central space through anticipation and angle management.</p></div></div>
+        <div class="role"><span class="b">CAM</span><div><b data-en="Attacking Midfielder" data-id="Gelandang Serang">Attacking Midfielder</b><p data-en="Operates between lines and creates forward progression." data-id="Bermain di antara lini dan menciptakan progresi serangan.">Operates between lines and creates forward progression.</p></div></div>
+        <div class="role"><span class="b">RW·RB</span><div><b data-en="Right Wing &amp; Right Back" data-id="Sayap &amp; Bek Kanan">Right Wing &amp; Right Back</b><p data-en="Provides width and carrying threat, or disciplined cover on the right." data-id="Memberi lebar dan ancaman membawa bola, atau cover disiplin di sisi kanan.">Provides width and carrying threat, or disciplined cover on the right.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="Recognition" data-id="Pencapaian">Recognition</div>
+      <h2 class="h2" data-en="Output others have already noticed." data-id="Capaian yang sudah diakui pihak lain.">Output others have already noticed.</h2>
+    </div>
+    <div class="bento4">
+      <div class="rec glass tilt r"><div class="ic">01</div><b data-en="Best Player, BSS Holiday Camp 2023" data-id="Best Player, BSS Holiday Camp 2023">Best Player, BSS Holiday Camp 2023</b><p data-en="Individual recognition within the BSS environment." data-id="Pengakuan individual di lingkungan BSS.">Individual recognition within the BSS environment.</p></div>
+      <div class="rec glass tilt r d1"><div class="ic">02</div><b data-en="BSS Regional Team, 2025" data-id="Tim Regional BSS, 2025">BSS Regional Team, 2025</b><p data-en="Selected into the regional representative squad." data-id="Terpilih ke skuad representatif regional.">Selected into the regional representative squad.</p></div>
+      <div class="rec glass tilt r d2"><div class="ic">03</div><b data-en="School Captain &amp; 2x MVP" data-id="Kapten Sekolah &amp; 2x MVP">School Captain &amp; 2x MVP</b><p data-en="Led Global Sevilla Pulomas with two tournament MVP awards." data-id="Memimpin Global Sevilla Pulomas dengan dua gelar MVP turnamen.">Led Global Sevilla Pulomas with two tournament MVP awards.</p></div>
+      <div class="rec glass tilt r d3"><div class="ic">04</div><b data-en="National Student Call-up, 2026" data-id="Panggilan Timnas Pelajar, 2026">National Student Call-up, 2026</b><p data-en="Named in Garuda Muda Indonesia squads for international duty." data-id="Masuk skuad Garuda Muda Indonesia untuk tugas internasional.">Named in Garuda Muda Indonesia squads for international duty.</p></div>
+    </div>
+  </section>
+
+  <!-- PATHWAY -->
+  <section id="pathway" class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="Development Pathway" data-id="Jalur Pembinaan">Development Pathway</div>
+      <h2 class="h2" data-en="Structured exposure since age three." data-id="Eksposur terstruktur sejak usia tiga.">Structured exposure since age three.</h2>
+      <p class="sub" data-en="A continuous progression of environments, with completed phases and current simultaneous elite settings." data-id="Progresi lingkungan yang berkelanjutan, dengan fase yang selesai dan lingkungan elite aktif simultan.">A continuous progression of environments, with completed phases and current simultaneous elite settings.</p>
+    </div>
+    <div class="timeline">
+      <div class="row r"><div class="yr">'18</div><div class="path glass tilt"><div class="lbox"><img src="assets/images/banana-kicks-logo.png" alt="Banana Kicks"></div><div><h3>Banana Kicks Futsal Academy</h3><p data-en="First structured football foundation in Jakarta, at only three years old." data-id="Fondasi sepak bola terstruktur pertama di Jakarta, pada usia tiga tahun.">First structured football foundation in Jakarta, at only three years old.</p></div></div></div>
+      <div class="row r"><div class="yr">'19</div><div class="path glass tilt"><div class="lbox"><img src="assets/images/buffalo-logo.png" alt="Buffalo FC"></div><div><h3>Buffalo FC</h3><p data-en="Wider grassroots exposure before the pandemic paused youth activity." data-id="Eksposur grassroots lebih luas sebelum pandemi menghentikan aktivitas usia dini.">Wider grassroots exposure before the pandemic paused youth activity.</p></div></div></div>
+      <div class="row r"><div class="yr">'22</div><div class="path glass tilt"><div class="lbox"><img src="assets/images/bss-logo.png" alt="Brazilian Soccer Schools Indonesia"></div><div><h3>Brazilian Soccer Schools Indonesia <span class="tag past" data-en="Until early '26" data-id="Sampai awal '26">Until early '26</span></h3><p data-en="Core technical phase: ball mastery, creativity and small-sided decision-making." data-id="Fase teknik inti: ball mastery, kreativitas, dan keputusan small-sided.">Core technical phase: ball mastery, creativity and small-sided decision-making.</p></div></div></div>
+      <div class="row r"><div class="yr">'24</div><div class="path glass tilt"><div class="lbox"><img src="assets/images/rifa-logo.png" alt="Royal Indonesia Football Academy"></div><div><h3>Royal Indonesia Football Academy <span class="tag live"><span class="d"></span><span data-en="Current" data-id="Aktif">Current</span></span></h3><p data-en="Elite selection environment associated with the Real Madrid Foundation methodology." data-id="Lingkungan seleksi elite yang terkait dengan metodologi Real Madrid Foundation.">Elite selection environment associated with the Real Madrid Foundation methodology.</p></div></div></div>
+      <div class="row r"><div class="yr">'25</div><div class="path glass tilt"><div class="lbox"><img src="assets/images/sty-logo.png" alt="STY FC Academy"></div><div><h3>STY FC Academy <span class="tag live"><span class="d"></span><span data-en="Current" data-id="Aktif">Current</span></span></h3><p data-en="Elite team selection and international tournament exposure." data-id="Seleksi elite team dan eksposur turnamen internasional.">Elite team selection and international tournament exposure.</p></div></div></div>
+      <div class="row r"><div class="yr">'25</div><div class="path glass tilt"><div class="lbox"><img src="assets/images/asiop-logo.png" alt="ASIOP FC Academy" style="max-width:66%;max-height:66%"></div><div><h3>ASIOP FC Academy <span class="tag live"><span class="d"></span><span data-en="Current" data-id="Aktif">Current</span></span></h3><p data-en="Semi-elite to elite development environment and academy competition." data-id="Lingkungan pembinaan semi-elite hingga elite dan kompetisi akademi.">Semi-elite to elite development environment and academy competition.</p></div></div></div>
+      <div class="row r"><div class="yr">'26</div><div class="path glass tilt"><div class="lbox"><img src="assets/images/isnt-logo.png" alt="Indonesia Student National Team"></div><div><h3>Garuda Muda · Student National Team <span class="tag live"><span class="d"></span><span data-en="Current" data-id="Aktif">Current</span></span></h3><p data-en="Selected for student national team duty and international assignments." data-id="Terpilih untuk tugas timnas pelajar dan penugasan internasional.">Selected for student national team duty and international assignments.</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- DATA -->
+  <section id="data" class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="Performance Data" data-id="Data Performa">Performance Data</div>
+      <h2 class="h2" data-en="Measured, not claimed." data-id="Terukur, bukan klaim.">Measured, not claimed.</h2>
+      <p class="sub" data-en="Reformatted from the supplied INSAIT JOY tracking reference. A supporting measurement layer, not a standalone verdict." data-id="Diformat ulang dari acuan tracking INSAIT JOY yang diberikan. Lapisan pengukuran pendukung, bukan penilaian tunggal.">Reformatted from the supplied INSAIT JOY tracking reference. A supporting measurement layer, not a standalone verdict.</p>
+    </div>
+
+    <div class="metric-article glass tilt r">
+      <div>
+        <h3 data-en="Measurement Reference" data-id="Acuan Pengukuran">Measurement Reference</h3>
+        <p data-en="INSAIT JOY is a wearable-based performance tracking system used in training and matches. It records movement and athletic output across a session and aggregates the data into Personal Best and Personal Average values for each parameter." data-id="INSAIT JOY adalah sistem pelacakan performa berbasis perangkat wearable yang digunakan saat latihan dan pertandingan. Ia merekam pergerakan dan output atletik sepanjang sesi, lalu mengolahnya menjadi nilai Personal Best dan Personal Average untuk tiap parameter.">INSAIT JOY is a wearable-based performance tracking system used in training and matches. It records movement and athletic output across a session and aggregates the data into Personal Best and Personal Average values for each parameter.</p>
+        <p data-en="Read each bar as a comparison between Dipta's own peak output (Personal Best) and his own typical output (Personal Average). Both figures are Dipta's, his best recorded session against his average, not a ranking against other players. Distance and high-speed figures reflect work-rate and repeatability, while speed, acceleration and jump reflect explosiveness." data-id="Baca tiap bar sebagai perbandingan antara output puncak Dipta sendiri (Personal Best) dan output tipikalnya sendiri (Personal Average). Keduanya adalah angka milik Dipta, sesi terbaiknya dibanding sesi rata-ratanya, bukan peringkat terhadap pemain lain. Angka jarak dan kecepatan tinggi mencerminkan work-rate dan repeatability, sementara kecepatan, akselerasi, dan lompatan mencerminkan eksplosivitas.">Read each bar as a comparison between Dipta's own peak output (Personal Best) and his own typical output (Personal Average). Both figures are Dipta's, his best recorded session against his average, not a ranking against other players. Distance and high-speed figures reflect work-rate and repeatability, while speed, acceleration and jump reflect explosiveness.</p>
+        <div class="signals">
+          <div class="signal"><small data-en="Profile Signal" data-id="Sinyal Profil">Profile Signal</small><strong data-en="High Output" data-id="Output Tinggi">High Output</strong><span data-en="Strong personal-best markers across distance, high-speed work and acceleration." data-id="Penanda personal best kuat pada jarak, kerja kecepatan tinggi, dan akselerasi.">Strong personal-best markers across distance, high-speed work and acceleration.</span></div>
+          <div class="signal"><small data-en="Technical Signal" data-id="Sinyal Teknis">Technical Signal</small><strong data-en="Two-foot Use" data-id="Dua Kaki Aktif">Two-foot Use</strong><span data-en="Foot-use spread supports a flexible contact profile, right foot dominant." data-id="Sebaran penggunaan kaki mendukung profil kontak fleksibel, kaki kanan dominan.">Foot-use spread supports a flexible contact profile, right foot dominant.</span></div>
+        </div>
+      </div>
+      <img class="joy" src="assets/images/insait-joy-logo.png" alt="INSAIT JOY">
+    </div>
+
+    <div class="subhead r">
+      <h3 data-en="Latest session" data-id="Sesi terakhir">Latest session</h3>
+      <span class="ln"></span>
+      <span class="meta">INSAIT JOY · Smart Shin Guards</span>
+    </div>
+    <div class="latest glass tilt r">
+      <div class="latest-top">
+        <div class="grade">
+          <div class="g" data-f="grade">A<sup>+</sup></div>
+          <div class="gmeta">
+            <div class="sc"><span data-f="score">88</span><small> /100</small></div>
+            <span class="beat"><span class="d"></span><span data-en="Beating" data-id="Mengungguli">Beating</span> <span data-f="beating">91</span><span data-en="% of users" data-id="% pengguna">% of users</span></span>
+          </div>
+        </div>
+        <div class="sess-meta">
+          <div class="mi"><small data-en="Date" data-id="Tanggal">Date</small><b data-f="date_display">17 May 2026 · Sun</b></div>
+          <div class="mi"><small data-en="Kick-off" data-id="Mulai">Kick-off</small><b data-f="kickoff">10:16</b></div>
+          <div class="mi"><small data-en="Duration" data-id="Durasi">Duration</small><b data-f="duration">138'17"</b></div>
+        </div>
+      </div>
+      <div class="scores r">
+        <div class="score"><div class="ring" style="--val:95;--acc:#30d158"><span class="rv" data-f="scores.stamina" data-count="95">95</span></div><span class="lbl" data-en="Stamina" data-id="Stamina">Stamina</span></div>
+        <div class="score"><div class="ring" style="--val:91;--acc:#9be15e"><span class="rv" data-f="scores.speed" data-count="91">91</span></div><span class="lbl" data-en="Speed" data-id="Kecepatan">Speed</span></div>
+        <div class="score"><div class="ring" style="--val:83;--acc:#30d1b0"><span class="rv" data-f="scores.acceleration" data-count="83">83</span></div><span class="lbl" data-en="Acceleration" data-id="Akselerasi">Acceleration</span></div>
+        <div class="score"><div class="ring" style="--val:75;--acc:#ff8a3d"><span class="rv" data-f="scores.balance" data-count="75">75</span></div><span class="lbl" data-en="Balance" data-id="Keseimbangan">Balance</span></div>
+        <div class="score"><div class="ring" style="--val:80;--acc:#0a84ff"><span class="rv" data-f="scores.power" data-count="80">80</span></div><span class="lbl" data-en="Power" data-id="Power">Power</span></div>
+      </div>
+    </div>
+    <div class="session-grid">
+      <div class="scard glass tilt r" style="--acc:#30d158">
+        <div class="ch"><span class="cd"></span><b data-en="Stamina" data-id="Stamina">Stamina</b></div>
+        <div class="srow"><span data-en="Distance / min" data-id="Jarak / menit">Distance / min</span><b><span data-f="stamina.distance_per_min">37</span><small>m</small></b></div>
+        <div class="srow"><span data-en="Avg. sprint distance" data-id="Rata-rata sprint">Avg. sprint distance</span><b><span data-f="stamina.avg_sprint">13</span><small>m</small></b></div>
+        <div class="srow"><span data-en="Calories" data-id="Kalori">Calories</span><b><span data-f="stamina.calories">577</span><small>kcal</small></b></div>
+        <div class="srow"><span data-en="Distance covered" data-id="Total jarak">Distance covered</span><b><span data-f="stamina.distance">18,581</span><small>m</small></b></div>
+        <div class="srow"><span data-en="High-speed distance" data-id="Jarak kec. tinggi">High-speed distance</span><b><span data-f="stamina.high_speed">2,368</span><small>m</small></b></div>
+        <div class="srow"><span data-en="Sprint distance" data-id="Jarak sprint">Sprint distance</span><b><span data-f="stamina.sprint">529</span><small>m</small></b></div>
+      </div>
+      <div class="scard glass tilt r d1" style="--acc:#9be15e">
+        <div class="ch"><span class="cd"></span><b data-en="Speed" data-id="Kecepatan">Speed</b></div>
+        <div class="srow"><span data-en="High-speed runs" data-id="Lari kec. tinggi">High-speed runs</span><b><span data-f="speed.hs_runs">172</span></b></div>
+        <div class="srow"><span data-en="Max. speed" data-id="Kecepatan maks">Max. speed</span><b><span data-f="speed.max_speed">26.0</span><small>km/h</small></b></div>
+        <div class="srow"><span data-en="Sprints" data-id="Sprint">Sprints</span><b><span data-f="speed.sprints">40</span></b></div>
+      </div>
+      <div class="scard glass tilt r d2" style="--acc:#30d1b0">
+        <div class="ch"><span class="cd"></span><b data-en="Acceleration" data-id="Akselerasi">Acceleration</b></div>
+        <div class="srow"><span data-en="Max. acceleration" data-id="Akselerasi maks">Max. acceleration</span><b><span data-f="acceleration.max_accel">3.8</span><small>m/s&sup2;</small></b></div>
+        <div class="srow"><span data-en="Sharp turns / jumps" data-id="Sharp turns / lompatan">Sharp turns / jumps</span><b><span data-f="acceleration.sharp_turns">323</span> / <span data-f="acceleration.jumps">53</span></b></div>
+        <div class="srow"><span data-en="Highest jump" data-id="Lompatan tertinggi">Highest jump</span><b><span data-f="acceleration.highest_jump">31</span><small>cm</small></b></div>
+      </div>
+      <div class="scard glass tilt r d1" style="--acc:#ff8a3d">
+        <div class="ch"><span class="cd"></span><b data-en="Balance" data-id="Keseimbangan">Balance</b></div>
+        <div class="footbar"><i class="lf" style="width:28%"></i><i class="rf" style="width:72%"></i></div>
+        <div class="srow"><span data-en="Left foot" data-id="Kaki kiri">Left foot</span><b><span data-f="balance.left_foot">28</span><small>%</small></b></div>
+        <div class="srow"><span data-en="Right foot" data-id="Kaki kanan">Right foot</span><b><span data-f="balance.right_foot">72</span><small>%</small></b></div>
+        <div class="srow"><span data-en="Ball touches (L / R)" data-id="Sentuhan bola (Ki / Ka)">Ball touches (L / R)</span><b><span data-f="balance.touch_left">152</span> / <span data-f="balance.touch_right">392</span></b></div>
+      </div>
+      <div class="scard glass tilt r d2" style="--acc:#0a84ff">
+        <div class="ch"><span class="cd"></span><b data-en="Power" data-id="Power">Power</b></div>
+        <div class="srow"><span data-en="Max. kicking power" data-id="Kekuatan tendangan maks">Max. kicking power</span><b><span data-f="power.max_kick">156</span><small>kg</small></b></div>
+      </div>
+    </div>
+  <p class="grid-label r" data-en="Personal records · best vs average session (Dipta only)" data-id="Rekor pribadi · sesi terbaik vs rata-rata (khusus Dipta)">Personal records · best vs average session (Dipta only)</p>
+    <div class="mgrid r d1">
+      <div class="metric glass"><div class="t"><b data-en="Distance Covered" data-id="Jarak Tempuh">Distance Covered</b><span>m</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">32,765</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:19%"></i></div><span class="val">6,110</span></div></div>
+      <div class="metric glass"><div class="t"><b data-en="High-speed Dist." data-id="Jarak Kec. Tinggi">High-speed Dist.</b><span>m</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">4,869</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:18%"></i></div><span class="val">871</span></div></div>
+      <div class="metric glass"><div class="t"><b data-en="Sprint Distance" data-id="Jarak Sprint">Sprint Distance</b><span>m</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">764</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:16%"></i></div><span class="val">119</span></div></div>
+      <div class="metric glass"><div class="t"><b data-en="Max Speed" data-id="Kec. Maks">Max Speed</b><span>km/h</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">30.0</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:76%"></i></div><span class="val">22.7</span></div></div>
+      <div class="metric glass"><div class="t"><b data-en="Max Accel." data-id="Akselerasi">Max Accel.</b><span>m/s&sup2;</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">4.9</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:63%"></i></div><span class="val">3.1</span></div></div>
+      <div class="metric glass"><div class="t"><b data-en="Sharp Turns" data-id="Sharp Turns">Sharp Turns</b><span>n</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">583</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:21%"></i></div><span class="val">120</span></div></div>
+      <div class="metric glass"><div class="t"><b data-en="Highest Jump" data-id="Lompatan">Highest Jump</b><span>cm</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">90</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:30%"></i></div><span class="val">27</span></div></div>
+      <div class="metric glass"><div class="t"><b data-en="Kicking Power" data-id="Tendangan">Kicking Power</b><span>idx</span></div><div class="cmp"><span data-en="Best" data-id="Terbaik">Best</span><div class="bar"><i class="best" style="--best:100%"></i></div><span class="val">248</span></div><div class="cmp"><span data-en="Avg" data-id="Rata">Avg</span><div class="bar"><i class="avg" style="--avg:69%"></i></div><span class="val">171</span></div></div>
+    </div>
+    <p class="mfoot r" data-en="Source note. Values are reproduced from the supplied INSAIT JOY screen reference with the original parameter labels. They are session-tracking figures and should be read as indicative, not as a clinical assessment." data-id="Catatan sumber. Nilai direproduksi dari acuan layar INSAIT JOY yang diberikan dengan label parameter aslinya. Angka berasal dari tracking sesi dan bersifat indikatif, bukan penilaian klinis.">Source note. Values are reproduced from the supplied INSAIT JOY screen reference with the original parameter labels. They are session-tracking figures and should be read as indicative, not as a clinical assessment.</p>
+
+    </section>
+
+  <!-- TOURNAMENTS -->
+  <section class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="International Exposure" data-id="Eksposur Internasional">International Exposure</div>
+      <h2 class="h2" data-en="Already tested beyond the academy." data-id="Sudah teruji di luar akademi.">Already tested beyond the academy.</h2>
+      <p class="sub" data-en="Official student national team call-ups, with the call-up letters attached as proof." data-id="Pemanggilan resmi timnas pelajar, dengan surat pemanggilan terlampir sebagai bukti.">Official student national team call-ups, with the call-up letters attached as proof.</p>
+    </div>
+    <div class="tours">
+      <a class="tour glass tilt r" href="assets/docs/maxim-cup-kl-callup.pdf" target="_blank" rel="noopener">
+        <div class="tl"><img src="assets/images/maxim-cup-kl.png" alt="MAXIM Cup KL"></div>
+        <div><h3>MAXIM Cup KL '26</h3><p data-en="Called up by Garuda Muda Indonesia for the Kuala Lumpur international tournament." data-id="Dipanggil Garuda Muda Indonesia untuk turnamen internasional Kuala Lumpur.">Called up by Garuda Muda Indonesia for the Kuala Lumpur international tournament.</p>
+        <span class="proof"><span class="pdf">PDF</span><span data-en="View official call-up letter" data-id="Lihat surat pemanggilan resmi">View official call-up letter</span><span class="a">&rarr;</span></span></div>
+      </a>
+      <a class="tour glass tilt r d1" href="assets/docs/piala-dunia-anak-callup.pdf" target="_blank" rel="noopener">
+        <div class="tl"><img src="assets/images/piala-dunia-anak-indonesia.png" alt="Piala Dunia Anak Indonesia"></div>
+        <div><h3>Piala Dunia Anak Indonesia '26</h3><p data-en="Listed in the student national selection for the Bandung edition." data-id="Terdaftar dalam seleksi timnas pelajar untuk edisi Bandung.">Listed in the student national selection for the Bandung edition.</p>
+        <span class="proof"><span class="pdf">PDF</span><span data-en="View official call-up letter" data-id="Lihat surat pemanggilan resmi">View official call-up letter</span><span class="a">&rarr;</span></span></div>
+      </a>
+    </div>
+    <div class="chips r d2">
+      <span class="chip2"><span class="y">'25</span> KFAM Kuala Lumpur · STY FC Academy</span>
+      <span class="chip2"><span class="y">'25</span> Milo Challenger Cup KL · BSS Regional</span>
+      <span class="chip2"><span class="y">'26</span> Garuda Muda · Student National Team</span>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video" class="section">
+    <div class="head center r">
+      <div class="kicker line" style="justify-content:center" data-en="Highlights" data-id="Highlights">Highlights</div>
+      <h2 class="h2" data-en="See it before someone else does." data-id="Lihat lebih dulu sebelum yang lain.">See it before someone else does.</h2>
+      <p class="sub" data-en="Match footage as a practical starting point for coaches and scouts. Further clips can be curated on request." data-id="Rekaman pertandingan sebagai titik awal praktis untuk pelatih dan scout. Klip lain dapat dikurasi sesuai permintaan.">Match footage as a practical starting point for coaches and scouts. Further clips can be curated on request.</p>
+    </div>
+    <div class="videos r">
+      <div class="vcard"><iframe src="https://www.youtube.com/embed/zbqQhWfIo5k?rel=0" title="Dipta highlights 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <div class="vcard"><iframe src="https://www.youtube.com/embed/Sd6vkM_M4lM?rel=0" title="Dipta highlights 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <div class="vcard"><iframe src="https://www.youtube.com/embed/_h1Dt2GbwlQ?rel=0" title="Dipta highlights 3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    </div>
+    <div class="actions center r d1" style="margin-top:18px;justify-content:center"><a class="btn" href="https://youtube.com/@diptabudiman?si=USkRktxrRs0QA2G4" target="_blank" rel="noopener"><span data-en="Open Full YouTube Channel" data-id="Buka Channel YouTube">Open Full YouTube Channel</span><span class="a">&rarr;</span></a></div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="Gallery" data-id="Galeri">Gallery</div>
+      <h2 class="h2" data-en="Different phases, the same composure." data-id="Fase berbeda, ketenangan yang sama.">Different phases, the same composure.</h2>
+    </div>
+    <div class="gal">
+      <div class="tile r"><img src="assets/images/gallery-01.webp" alt="Dipta match photo"></div>
+      <div class="tile r d1"><img src="assets/images/gallery-02.webp" alt="Dipta match photo"></div>
+      <div class="tile r d2"><img src="assets/images/gallery-03.webp" alt="Dipta match photo"></div>
+      <div class="tile r d3"><img src="assets/images/gallery-04.webp" alt="Dipta match photo"></div>
+      <div class="tile r"><img src="assets/images/gallery-05.webp" alt="Dipta match photo"></div>
+      <div class="tile r d1"><img src="assets/images/gallery-06.webp" alt="Dipta match photo"></div>
+      <div class="tile r d2"><img src="assets/images/gallery-07.webp" alt="Dipta match photo"></div>
+      <div class="tile r d3"><img src="assets/images/gallery-08.webp" alt="Dipta match photo"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="cta glass tilt r">
+      <div class="kicker" style="justify-content:center" data-en="The Decision" data-id="Keputusan">The Decision</div>
+      <h2 data-en="Every season he develops elsewhere is a season you did not." data-id="Setiap musim ia berkembang di tempat lain adalah musim yang terlewat bagi Anda.">Every season he develops elsewhere is a season you did not.</h2>
+      <p data-en="Dipta is already inside an elite, multi-environment pathway. Clubs that engage early shape the most upside. The rest watch the profile mature in someone else's colours." data-id="Dipta sudah berada di jalur elite multi-lingkungan. Klub yang terlibat lebih awal memperoleh potensi terbesar. Sisanya hanya menonton profil ini matang dengan warna tim lain.">Dipta is already inside an elite, multi-environment pathway. Clubs that engage early shape the most upside. The rest watch the profile mature in someone else's colours.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn red" href="#contact"><span data-en="Request a Viewing or Trial" data-id="Ajukan Viewing atau Trial">Request a Viewing or Trial</span><span class="a">&rarr;</span></a>
+        <a class="btn" href="#video" data-en="Watch Highlights First" data-id="Lihat Highlights Dulu">Watch Highlights First</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="head r">
+      <div class="kicker line" data-en="Contact" data-id="Kontak">Contact</div>
+      <h2 class="h2" data-en="Selection &amp; scouting desk." data-id="Meja seleksi &amp; scouting.">Selection &amp; scouting desk.</h2>
+      <p class="sub" data-en="For club review, trial invitations, coach references and scouting discussion regarding Dipta's profile." data-id="Untuk review klub, undangan trial, referensi pelatih, dan diskusi scouting terkait profil Dipta.">For club review, trial invitations, coach references and scouting discussion regarding Dipta's profile.</p>
+    </div>
+    <div class="contact">
+      <div class="panel glass tilt r">
+        <h3 data-en="DB10 Scouting Desk" data-id="Meja Scouting DB10">DB10 Scouting Desk</h3>
+        <p style="color:var(--muted);margin-top:10px" data-en="Built for professional follow-up: club evaluation, academy communication and trial invitations. Enquiries are handled directly by Dipta's representatives." data-id="Dibuat untuk tindak lanjut profesional: evaluasi klub, komunikasi akademi, dan undangan trial. Pertanyaan ditangani langsung oleh perwakilan Dipta.">Built for professional follow-up: club evaluation, academy communication and trial invitations. Enquiries are handled directly by Dipta's representatives.</p>
+        <p style="margin-top:14px"><a href="https://youtube.com/@diptabudiman?si=USkRktxrRs0QA2G4" target="_blank" rel="noopener">youtube.com/@diptabudiman</a></p>
+        <div class="partners">
+          <span class="plabel" data-en="Footage captured with" data-id="Rekaman diambil dengan">Footage captured with</span>
+          <div class="plogos">
+            <div class="plogo"><img src="assets/images/insta360-logo.png" alt="Insta360"></div>
+            <div class="plogo"><img src="assets/images/dji-logo.png" alt="DJI"></div>
+          </div>
+        </div>
+      </div>
+      <form class="panel glass tilt r d1" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Do not fill: <input name="bot-field"></label></p>
+        <div class="frow">
+          <input name="full_name" required data-en-ph="Full name" data-id-ph="Nama lengkap" placeholder="Full name">
+          <input name="organisation" data-en-ph="Club / academy" data-id-ph="Klub / akademi" placeholder="Club / academy">
+        </div>
+        <input type="email" name="email" required placeholder="Email">
+        <textarea name="message" required data-en-ph="Tell us about the opportunity (level, location, timeframe)." data-id-ph="Ceritakan peluangnya (level, lokasi, waktu)." placeholder="Tell us about the opportunity (level, location, timeframe)."></textarea>
+        <button class="btn solid" type="submit" style="width:100%"><span data-en="Send Enquiry" data-id="Kirim Pertanyaan">Send Enquiry</span><span class="a">&rarr;</span></button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div><b>Maharddhika Daniswara Budiman</b> · Dipta · No. 10</div>
+  <div>DB10 Talent Profile · © 2026</div>
+</footer>
+
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.lang button'));
+  function setLang(l){
+    document.documentElement.lang=l; document.body.dataset.lang=l;
+    btns.forEach(function(b){b.classList.toggle('on',b.dataset.set===l);});
+    document.querySelectorAll('[data-en]').forEach(function(el){var v=el.getAttribute('data-'+l); if(v!==null) el.textContent=v;});
+    document.querySelectorAll('[data-en-ph]').forEach(function(el){var v=el.getAttribute('data-'+l+'-ph'); if(v!==null) el.setAttribute('placeholder',v);});
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set);});});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function countUp(el){
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var target=parseFloat(el.getAttribute('data-count')); if(isNaN(target))return;
+    var dur=1100,t0=null;
+    function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur);var e=1-Math.pow(1-p,3);var v=target*e;
+      el.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString('en-US'); if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+    e.target.classList.add('in');
+    e.target.querySelectorAll&&e.target.querySelectorAll('[data-count]').forEach(function(c){if(!c.dataset.done){c.dataset.done=1;if(!reduce)countUp(c);}});
+    io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -7% 0px'});
+  document.querySelectorAll('.r,.mgrid').forEach(function(el){io.observe(el);});
+
+  var prog=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';}
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  document.addEventListener('pointermove',function(e){
+    document.documentElement.style.setProperty('--mx',e.clientX+'px');
+    document.documentElement.style.setProperty('--my',e.clientY+'px');
+  },{passive:true});
+  document.querySelectorAll('.tilt').forEach(function(t){
+    t.addEventListener('pointermove',function(e){var r=t.getBoundingClientRect();
+      t.style.setProperty('--px',(e.clientX-r.left)+'px');t.style.setProperty('--py',(e.clientY-r.top)+'px');},{passive:true});
+  });
+
+  if(!reduce){
+    var img=document.getElementById('photoImg'),fig=document.getElementById('photo'),tick=false;
+    function upd(){tick=false;if(!img||!fig)return;var r=fig.getBoundingClientRect();
+      var p=(r.top+r.height/2-window.innerHeight/2)/window.innerHeight;
+      img.style.transform='translateY('+(Math.max(-1,Math.min(1,p))*-24)+'px)';}
+    window.addEventListener('scroll',function(){if(!tick){requestAnimationFrame(upd);tick=true;}},{passive:true}); upd();
+  }
+  function fmtVal(v){ if(typeof v==='number'){ return Number.isInteger(v)? v.toLocaleString('en-US') : String(v); } return v; }
+  function fpath(o,p){ return p.split('.').reduce(function(a,k){ return (a&&a[k]!=null)?a[k]:undefined; }, o); }
+  function applyLatest(d){
+    document.querySelectorAll('[data-f]').forEach(function(el){
+      var key=el.getAttribute('data-f'); var v=fpath(d,key);
+      if(v===undefined||v===null) return;
+      if(key==='grade'){ var m=String(v).match(/^([A-Za-z]+)([+-]?)$/); el.innerHTML=m?(m[1]+(m[2]?'<sup>'+m[2]+'</sup>':'')):String(v); return; }
+      el.textContent=fmtVal(v);
+      if(el.hasAttribute('data-count')) el.setAttribute('data-count', v);
+      var ring=el.closest('.ring'); if(ring) ring.style.setProperty('--val', v);
+    });
+    if(d.balance){ var lf=document.querySelector('.footbar .lf'), rf=document.querySelector('.footbar .rf');
+      if(lf&&d.balance.left_foot!=null) lf.style.width=d.balance.left_foot+'%';
+      if(rf&&d.balance.right_foot!=null) rf.style.width=d.balance.right_foot+'%'; }
+  }
+  fetch('./data/latest-session.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){ if(d) applyLatest(d); }).catch(function(){});
+})();
+</script>
+</body>
+</html>

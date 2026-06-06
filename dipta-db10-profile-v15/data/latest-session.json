@@ -1,0 +1,44 @@
+{
+  "source_image": "sessions/2026-05-17.png",
+  "date_display": "17 May 2026 · Sun",
+  "kickoff": "10:16",
+  "duration": "138'17\"",
+  "grade": "A+",
+  "score": 88,
+  "beating": 91,
+  "scores": {
+    "stamina": 95,
+    "speed": 91,
+    "acceleration": 83,
+    "balance": 75,
+    "power": 80
+  },
+  "stamina": {
+    "distance_per_min": 37,
+    "avg_sprint": 13,
+    "calories": 577,
+    "distance": 18581,
+    "high_speed": 2368,
+    "sprint": 529
+  },
+  "speed": {
+    "hs_runs": 172,
+    "max_speed": "26.0",
+    "sprints": 40
+  },
+  "acceleration": {
+    "max_accel": "3.8",
+    "sharp_turns": 323,
+    "jumps": 53,
+    "highest_jump": 31
+  },
+  "balance": {
+    "left_foot": 28,
+    "right_foot": 72,
+    "touch_left": 152,
+    "touch_right": 392
+  },
+  "power": {
+    "max_kick": 156
+  }
+}
