@@ -22,11 +22,11 @@
   },
   "speed": {
     "hs_runs": 118,
-    "max_speed": "24.0",
+    "max_speed": "24.0km/h",
     "sprints": 16
   },
   "acceleration": {
-    "max_accel": "3.0",
+    "max_accel": "3.0m/s²",
     "sharp_turns": 216,
     "jumps": 19,
     "highest_jump": 29
