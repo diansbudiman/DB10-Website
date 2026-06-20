@@ -1,44 +1,44 @@
 {
-  "date_display": "07 Jun 2026 · Sun",
-  "kickoff": "16:31",
-  "duration": "1:39:05",
+  "date_display": "06 Jun 2026 · Sat",
+  "kickoff": "22:26",
+  "duration": "738'58\"",
   "grade": "A",
-  "score": 79,
-  "beating": 36,
+  "score": 83,
+  "beating": 56,
   "scores": {
-    "stamina": 78,
-    "speed": 81,
-    "acceleration": 80,
-    "balance": 73,
-    "power": 79
+    "stamina": 88,
+    "speed": 83,
+    "acceleration": 77,
+    "balance": 80,
+    "power": 89
   },
   "stamina": {
-    "distance_per_min": 38,
-    "avg_sprint": 15,
-    "calories": 166,
-    "distance": 5325,
-    "high_speed": 606,
-    "sprint": 73
+    "distance_per_min": 13,
+    "avg_sprint": 11,
+    "calories": 314,
+    "distance": 10091,
+    "high_speed": 1487,
+    "sprint": 177
   },
   "speed": {
-    "hs_runs": 36,
-    "max_speed": "23.0",
-    "sprints": 5
+    "hs_runs": 118,
+    "max_speed": "24.0km/h",
+    "sprints": 16
   },
   "acceleration": {
-    "max_accel": "3.4",
-    "sharp_turns": 107,
-    "jumps": 7,
-    "highest_jump": 21
+    "max_accel": "3.0m/s²",
+    "sharp_turns": 216,
+    "jumps": 19,
+    "highest_jump": 29
   },
   "balance": {
-    "left_foot": 26,
-    "right_foot": 74,
-    "touch_left": 25,
-    "touch_right": 72
+    "left_foot": 33,
+    "right_foot": 67,
+    "touch_left": 155,
+    "touch_right": 308
   },
   "power": {
-    "max_kick": 152
+    "max_kick": 217
   },
-  "source_image": "sessions/2026-06-08.jpeg"
+  "source_image": "sessions/2026-06-06.png"
 }
